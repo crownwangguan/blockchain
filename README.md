@@ -68,3 +68,22 @@ Block -
             Difficulty: 4
             Data      : guan 5
 ```
+
+## With Wallet and Transaction Pool function added
+
+Each user has a wallet contain their own public/private key and balance.
+Also with transaction pool added, transactions can be added into the pool without added into the blockchain.
+
+**To create a new transaction:**
+```
+curl --location --request POST 'localhost:3001/transactions'
+--header 'Content-Type: application/json'
+-d '{
+	"data": "asdf"
+}'
+```
+
+**Get transactions**
+```
+curl --location --request GET 'localhost:3002/transactions'
+```
